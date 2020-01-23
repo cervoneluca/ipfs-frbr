@@ -21,9 +21,19 @@ This package creates resources on the IPFS by organizing them as WORK, EXPRESSIO
 
 The packages uses the standard INFURA APIs to communicate to IPFS and to Ethereum.
 
+The ERC contract is currently stored on the ROPSTEN network at address: 0x3396922D398c0fD03Fe24aBF92f057e271A956cD
 ## Installation
 
 npm install --save https://github.com/cervoneluca/ipfs-frbr.git
+
+## Usage
+
+```javascript
+const mnemonic = 'the mnemonic phrase of your wallet';
+ipfsFrbr.init({
+  mnemonic,
+});
+```
 
 ## API
 
