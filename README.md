@@ -46,7 +46,7 @@ console.log(`WORK: ${JSON.stringify(work)}`);
 
 The results of the above code should be something like this:
 
-```json
+```Javascript
 {
   workId: 7,
   workUri: '/ipfs/QmfXCvuLPxyTQQBHxJVN3HqNvXv2t5K7VjeYBWGfZvb5eG',
