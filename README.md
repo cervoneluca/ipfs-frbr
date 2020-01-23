@@ -68,7 +68,7 @@ This following code creates an expression for the work created previousely.
     version: '0.0.1',
   });
 
-  console.log(`WORK With Expr 1: ${JSON.stringify(workUri)}`);
+  console.log(workUri);
 ```
 
 The results of the above code should be something like this:
