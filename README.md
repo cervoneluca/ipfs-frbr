@@ -110,7 +110,7 @@ This following code creates a manifestation for the expression created previouse
 Now, by calling
 
 ```javascript
-let workUri = await ipfsFrbr.getWork({ workId: 7 });
+await ipfsFrbr.getWork({ workId: 7 });
 ```
 
 you should receive /ipns/QmcHFG9BDArLqmheDz2Qkx3aeXG3oAABEqD3LAG53g9XJT that points to:
