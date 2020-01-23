@@ -68,23 +68,80 @@ This following code creates an expression for the work created previousely.
     version: '0.0.1',
   });
 
-  let workUri = await ipfsFrbr.getWork({ workId: 7 });
   console.log(`WORK With Expr 1: ${JSON.stringify(workUri)}`);
 ```
 
 The results of the above code should be something like this:
 
-```json
+```javascript
+{
+  "workId":7,
+  "workUri":"/ipfs/QmWbqvXR8pQW2R1HvgQ29RoVDi2VvunAZq59H4Axtsxh68",
+  "workMeta":{
+    "name":"A first work",
+    "description":"The First Work",
+    "expressions":[
+      {"name":"A first expression",
+      "description":"The first expression on work with workId 7",
+      "version":"0.0.1",
+      "manifestations":[]
+      }
+    ]
+  }
+}
+
 ```
 
 This following code creates a manifestation for the expression created previousely.
 
 ```javascript
+  const man = await ipfsFrbr.addManifestation({
+    workId: 7,
+    expressionVersion: '0.0.1',
+    name: 'A first manifestation',
+    description: 'The first expression on expression 0.0.1 of work with workId 7',
+    fileName: 'text.txt',
+    fileContent: 'hello ethereum and IPFS',
+  });
+
+  console.log(man);
 ```
 
-The results of the above code should be something like this:
+Now, by calling
 
-```json
+```javascript
+let workUri = await ipfsFrbr.getWork({ workId: 7 });
 ```
 
+you should receive /ipns/QmcHFG9BDArLqmheDz2Qkx3aeXG3oAABEqD3LAG53g9XJT that points to:
 
+```javascript
+{
+  "workId":7,
+  "workUri":"/ipfs/QmWbqvXR8pQW2R1HvgQ29RoVDi2VvunAZq59H4Axtsxh68",
+  "workMeta":{
+    "name":"A first work",
+    "description":"The First Work",
+    "expressions":[
+      {
+        "name":"A first expression",
+        "description":"The first expression on work with workId 7",
+        "version":"0.0.1",
+        "manifestations":[
+          {"name":"A first manifestation",
+          "description":"The first expression on expression 0.0.1 of work with workId 7",
+          "fileName":"text.txt",
+          "manifestationCid":"QmS9xAAnr6VnVobnPRba5fFMTKSg2e1pmVnyjNiVU9Pk5L"
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+While ipfs/QmS9xAAnr6VnVobnPRba5fFMTKSg2e1pmVnyjNiVU9Pk5L contains:
+
+```
+hello ethereum and IPFS
+```
