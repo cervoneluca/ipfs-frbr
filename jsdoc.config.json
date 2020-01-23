@@ -1,0 +1,28 @@
+{
+  "source": {
+    "include": ["src/api/ipfsFrbr.api.js"],
+    "includePattern": ".+\\.js(doc|x)?$",
+    "excludePattern": "(^|\\/|\\\\)_"
+  },
+  "sourceType": "module",
+  "tags": {
+    "allowUnknownTags": true,
+    "dictionaries": ["jsdoc"]
+  },
+  "plugins": [
+    "plugins/markdown"
+  ],
+  "templates": {
+    "referenceTitle": "ipfsFrbr",
+    "disableSort": false,
+    "collapse": false,
+    "resources": {
+        "akomando": "https://akomando.bitnomos.eu/"
+    }
+  },
+  "opts": {
+      "encoding": "utf8",
+      "destination": "./docs/",
+      "recurse": true
+  }
+}

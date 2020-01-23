@@ -1,0 +1,78 @@
+{
+  "name": "ipfsFrbr",
+  "version": "1.0.0",
+  "description": "A package for handling the semantic versioning on the distributed web",
+  "main": "./src/api/ipfsFrbr.api.js",
+  "bin": {
+    "ipfs-frbr": "./dist/ipfsFrbr.cli.min.js"
+  },
+  "scripts": {
+    "build": "scripts/build.sh",
+    "build:cli": "scripts/build-cli.sh",
+    "check": "scripts/check.sh",
+    "dev": "scripts/dev.sh",
+    "generate:docs": "scripts/generate-docs.sh",
+    "lint": "scripts/lint.sh",
+    "test": "scripts/test.sh",
+    "test:node": "scripts/test-node.sh",
+    "test:cli": "scripts/test-cli.sh",
+    "test:browser": "scripts/test-browser.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cervoneluca/ipfs-frbr.git"
+  },
+  "keywords": [
+    "distributed",
+    "web",
+    "semantic",
+    "versioning",
+    "package",
+    "node",
+    "npm",
+    "ipfs",
+    "infura"
+  ],
+  "author": "Luca Cervone",
+  "contributors": [
+    "Luca Cervone <cervoneluca@gmail.com> (https://www.linkedin.com/in/luca-cervone-57922118/)"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cervoneluca/ipfs-frbr/issues"
+  },
+  "homepage": "https://github.com/cervoneluca/ipfs-frbr.git#README",
+  "devDependencies": {
+    "@babel/cli": "latest",
+    "@babel/core": "latest",
+    "@babel/node": "latest",
+    "@babel/preset-env": "latest",
+    "babel-core": "bridge",
+    "babel-jest": "latest",
+    "babel-loader": "latest",
+    "chai": "latest",
+    "comment-parser": "latest",
+    "eslint": "latest",
+    "eslint-config-airbnb-base": "latest",
+    "eslint-loader": "latest",
+    "eslint-plugin-babel": "latest",
+    "eslint-plugin-import": "latest",
+    "jsdoc": "latest",
+    "mocha": "latest",
+    "shebang-loader": "latest",
+    "tui-jsdoc-template": "latest",
+    "underscore": "latest",
+    "webpack": "latest",
+    "webpack-cli": "latest"
+  },
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "commander": "^2.19.0",
+    "electron": "^7.1.10",
+    "ipfs-http-client": "^41.0.0",
+    "pretty-data2": "^0.40.1",
+    "truffle-hdwallet-provider": "^1.0.17",
+    "type-check": "^0.3.2",
+    "web3": "^1.2.5-rc.0"
+  }
+}

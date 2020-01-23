@@ -1,0 +1,7 @@
+node_modules
+dist
+.travis.yml
+.DS_Store
+index.js
+npm-debug.log
+docs
