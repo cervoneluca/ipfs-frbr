@@ -41,7 +41,7 @@ const work = await ipfsFrbr.createWork({
     description: 'The First Work',
 });
 
-console.log(`WORK: ${JSON.stringify(work)}`);
+console.log(work);
 ```
 
 The results of the above code should be something like this:
@@ -68,7 +68,7 @@ This following code creates an expression for the work created previousely.
     version: '0.0.1',
   });
 
-  console.log(workUri);
+  console.log(expr);
 ```
 
 The results of the above code should be something like this:
