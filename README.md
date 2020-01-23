@@ -47,11 +47,29 @@ console.log(`WORK: ${JSON.stringify(work)}`);
 The results of the above code should be something like this:
 
 ```json
+{
+  workId: 7,
+  workUri: '/ipfs/QmfXCvuLPxyTQQBHxJVN3HqNvXv2t5K7VjeYBWGfZvb5eG',
+  workMeta: {
+    name: 'A first work',
+    description: 'The First Work',
+    expressions: []
+  }
+}
 ```
 
 This following code creates an expression for the work created previousely.
 
 ```javascript
+  const expr = await ipfsFrbr.addExpression({
+    workId: 7,
+    name: 'A first expression',
+    description: 'The first expression on work with workId 7 and IPFS QmfXCvuLPxyTQQBHxJVN3HqNvXv2t5K7VjeYBWGfZvb5eG',
+    version: '0.0.1',
+  });
+
+  let workUri = await ipfsFrbr.getWork({ workId: 7 });
+  console.log(`WORK With Expr 1: ${JSON.stringify(workUri)}`);
 ```
 
 The results of the above code should be something like this:
