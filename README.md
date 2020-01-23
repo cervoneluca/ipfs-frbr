@@ -24,7 +24,20 @@ The packages uses the standard INFURA APIs to communicate to IPFS and to Ethereu
 The ERC contract is currently stored on the ROPSTEN network at address: 0x3396922D398c0fD03Fe24aBF92f057e271A956cD
 ## Installation
 
+Currently the package is nor built neither published on NPM.
+
+Try to install it by calling
+
+```shell
 npm install --save https://github.com/cervoneluca/ipfs-frbr.git
+```
+
+If it does not work download the code and run:
+
+```shell
+npm install
+npm run build
+```
 
 ## Usage
 
