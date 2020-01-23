@@ -28,19 +28,45 @@ npm install --save https://github.com/cervoneluca/ipfs-frbr.git
 
 ## Usage
 
+This following code creates a work with a specific IFPS CID and a specific Token ID in the ethereum blockchain.
+
 ```javascript
 const mnemonic = 'the mnemonic phrase of your wallet';
 ipfsFrbr.init({
   mnemonic,
 });
+
+const work = await ipfsFrbr.createWork({
+    name: 'A first work',
+    description: 'The First Work',
+});
+
+console.log(`WORK: ${JSON.stringify(work)}`);
 ```
 
-## API
+The results of the above code should be something like this:
 
-Currently the package offers three API:
+```json
+```
 
-### createWork
+This following code creates an expression for the work created previousely.
 
-### createExpression
+```javascript
+```
 
-### createManifestation
+The results of the above code should be something like this:
+
+```json
+```
+
+This following code creates a manifestation for the expression created previousely.
+
+```javascript
+```
+
+The results of the above code should be something like this:
+
+```json
+```
+
+
